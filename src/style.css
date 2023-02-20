@@ -1,0 +1,22 @@
+body {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+div#stats {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  width: 200px;
+  height: 100px;
+  opacity: 0.8;
+  user-select: none;
+}
+
+canvas#graph {
+  background: #000;
+  flex-grow: 1;
+  height: calc(100vh - 120px) !important;
+  width: 100vw !important;
+}

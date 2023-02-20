@@ -1,0 +1,303 @@
+import awsServiceNames from "./awsServiceNames";
+import awsDisplayNames from "./awsDisplayNames";
+
+const {
+    awsApiGatewayRestApi,
+    awsAutoscalingGroup,
+    awsAvailabilityZone,
+    awsCloud9EnvironmentEc2,
+    awsCloudformationStack,
+    awsCloudfrontDistribution,
+    awsCloudwatchMetricAlarm,
+    awsCognitoIdentityPool,
+    awsCognitoUserPool,
+    awsDbInstance,
+    awsCustomerGateway,
+    awsEc2TransitGateway,
+    awsEbsVolume,
+    awsEcsCluster,
+    awsEcsTask,
+    awsEfsFileSystem,
+    awsEfsMountTarget,
+    awsEksCluster,
+    awsEcrRepository,
+    awsElasticBeanstalkApplication,
+    awsElasticBeanstalkEnvironment,
+    awsElasticacheCluster,
+    awsElasticacheReplicationGroup,
+    awsEmrCluster,
+    awsInstance,
+    awsInternetGateway,
+    awsIotThing,
+    awsLambdaFunction,
+    awsNatGateway,
+    awsNetworkAcl,
+    awsRdsCluster,
+    awsRegion,
+    awsRoute53Zone,
+    awsRouteTable,
+    awsS3Bucket,
+    awsSecurityGroup,
+    awsSesEmailIdentity,
+    awsSnsTopic,
+    awsSqsQueue,
+    awsSubnet,
+    awsVpc,
+    awsVpnConnection,
+    awsRedshiftCluster,
+    awsAthenaDataCatalog,
+    awsGlueJob,
+    awsGlueRegistry,
+    awsSageMakerProject,
+    awsSageMakerExperiment,
+    awsMwaaEnvironment,
+} = awsServiceNames;
+
+const legendResources = [
+    {
+        id: awsApiGatewayRestApi,
+        displayName: awsDisplayNames[awsApiGatewayRestApi],
+        color: "white", // replace with actual color mappings
+    },
+    {
+        id: awsAutoscalingGroup,
+        displayName: awsDisplayNames[awsAutoscalingGroup],
+        color: "white",
+    },
+    {
+        id: awsAvailabilityZone,
+        displayName: awsDisplayNames[awsAvailabilityZone],
+        color: "white",
+    },
+    {
+        id: awsCloud9EnvironmentEc2,
+        displayName: awsDisplayNames[awsCloud9EnvironmentEc2],
+        color: "white",
+    },
+    {
+        id: awsCloudformationStack,
+        displayName: awsDisplayNames[awsCloudformationStack],
+        color: "white",
+    },
+    {
+        id: awsCloudfrontDistribution,
+        displayName: awsDisplayNames[awsCloudfrontDistribution],
+        color: "white",
+    },
+    {
+        id: awsCloudwatchMetricAlarm,
+        displayName: awsDisplayNames[awsCloudwatchMetricAlarm],
+        color: "white",
+    },
+    {
+        id: awsCognitoIdentityPool,
+        displayName: awsDisplayNames[awsCognitoIdentityPool],
+        color: "white",
+    },
+    {
+        id: awsCognitoUserPool,
+        displayName: awsDisplayNames[awsCognitoUserPool],
+        color: "white",
+    },
+    {
+        id: awsDbInstance,
+        displayName: awsDisplayNames[awsDbInstance],
+        color: "white",
+    },
+    {
+        id: awsEc2TransitGateway,
+        displayName: awsDisplayNames[awsEc2TransitGateway],
+        color: "white",
+    },
+    {
+        id: awsCustomerGateway,
+        displayName: awsDisplayNames[awsCustomerGateway],
+        color: "white",
+    },
+    {
+        id: awsEbsVolume,
+        displayName: awsDisplayNames[awsEbsVolume],
+        color: "white",
+    },
+    {
+        id: awsEcsCluster,
+        displayName: awsDisplayNames[awsEcsCluster],
+        color: "white",
+    },
+    {
+        id: awsEcsTask,
+        displayName: awsDisplayNames[awsEcsTask],
+        color: "white",
+    },
+    {
+        id: awsEfsFileSystem,
+        displayName: awsDisplayNames[awsEfsFileSystem],
+        color: "white",
+    },
+    {
+        id: awsEfsMountTarget,
+        displayName: awsDisplayNames[awsEfsMountTarget],
+        color: "white",
+    },
+    {
+        id: awsEcrRepository,
+        displayName: awsDisplayNames[awsEcrRepository],
+        color: "white",
+    },
+    {
+        id: awsEksCluster,
+        displayName: awsDisplayNames[awsEksCluster],
+        color: "white",
+    },
+    {
+        id: awsElasticBeanstalkApplication,
+        displayName: awsDisplayNames[awsElasticBeanstalkApplication],
+        color: "white",
+    },
+    {
+        id: awsElasticBeanstalkEnvironment,
+        displayName: awsDisplayNames[awsElasticBeanstalkEnvironment],
+        color: "white",
+    },
+    {
+        id: awsElasticacheCluster,
+        displayName: awsDisplayNames[awsElasticacheCluster],
+        color: "white",
+    },
+    {
+        id: awsElasticacheReplicationGroup,
+        displayName: awsDisplayNames[awsElasticacheReplicationGroup],
+        color: "white",
+    },
+    {
+        id: awsEmrCluster,
+        displayName: awsDisplayNames[awsEmrCluster],
+        color: "white",
+    },
+    {
+        id: awsInstance,
+        displayName: awsDisplayNames[awsInstance],
+        color: "white",
+    },
+    {
+        id: awsInternetGateway,
+        displayName: awsDisplayNames[awsInternetGateway],
+        color: "white",
+    },
+    {
+        id: awsIotThing,
+        displayName: awsDisplayNames[awsIotThing],
+        color: "white",
+    },
+    {
+        id: awsLambdaFunction,
+        displayName: awsDisplayNames[awsLambdaFunction],
+        color: "white",
+    },
+    {
+        id: awsNatGateway,
+        displayName: awsDisplayNames[awsNatGateway],
+        color: "white",
+    },
+    {
+        id: awsNetworkAcl,
+        displayName: awsDisplayNames[awsNetworkAcl],
+        color: "white",
+    },
+    {
+        id: awsRdsCluster,
+        displayName: awsDisplayNames[awsRdsCluster],
+        color: "white",
+    },
+    {
+        id: awsRegion,
+        displayName: awsDisplayNames[awsRegion],
+        color: "white",
+    },
+    {
+        id: awsRoute53Zone,
+        displayName: awsDisplayNames[awsRoute53Zone],
+        color: "white",
+    },
+    {
+        id: awsRouteTable,
+        displayName: awsDisplayNames[awsRouteTable],
+        color: "white",
+    },
+    {
+        id: awsS3Bucket,
+        displayName: awsDisplayNames[awsS3Bucket],
+        color: "white",
+    },
+    {
+        id: awsSecurityGroup,
+        displayName: awsDisplayNames[awsSecurityGroup],
+        color: "white",
+    },
+    {
+        id: awsSesEmailIdentity,
+        displayName: awsDisplayNames[awsSesEmailIdentity],
+        color: "white",
+    },
+    {
+        id: awsSnsTopic,
+        displayName: awsDisplayNames[awsSnsTopic],
+        color: "white",
+    },
+    {
+        id: awsSqsQueue,
+        displayName: awsDisplayNames[awsSqsQueue],
+        color: "white",
+    },
+    {
+        id: awsSubnet,
+        displayName: awsDisplayNames[awsSubnet],
+        color: "white",
+    },
+    {
+        id: awsVpc,
+        displayName: awsDisplayNames[awsVpc],
+        color: "white",
+    },
+    {
+        id: awsVpnConnection,
+        displayName: awsDisplayNames[awsVpnConnection],
+        color: "white",
+    },
+    {
+        id: awsRedshiftCluster,
+        displayName: awsDisplayNames[awsRedshiftCluster],
+        color: "white",
+    },
+    {
+        id: awsRedshiftCluster,
+        displayName: awsDisplayNames[awsAthenaDataCatalog],
+        color: "white",
+    },
+    {
+        id: awsRedshiftCluster,
+        displayName: awsDisplayNames[awsGlueJob],
+        color: "white",
+    },
+    {
+        id: awsRedshiftCluster,
+        displayName: awsDisplayNames[awsGlueRegistry],
+        color: "white",
+    },
+    {
+        id: awsRedshiftCluster,
+        displayName: awsDisplayNames[awsSageMakerProject],
+        color: "white",
+    },
+    {
+        id: awsRedshiftCluster,
+        displayName: awsDisplayNames[awsSageMakerExperiment],
+        color: "white",
+    },
+    {
+        id: awsRedshiftCluster,
+        displayName: awsDisplayNames[awsMwaaEnvironment],
+        color: "white",
+    },
+];
+export default legendResources;

@@ -1,0 +1,1 @@
+body{margin:0 auto;overflow:hidden}div#stats{height:100px;opacity:.8;position:fixed;right:0;top:0;user-select:none;width:200px;z-index:500}canvas#graph{background:#000;flex-grow:1;height:calc(100vh - 120px)!important;width:100vw!important}
